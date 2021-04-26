@@ -9,11 +9,11 @@ const Todo = ({todo}) => {
     const dispatch = useDispatch()
     return (
         <div>
-        <div><span style={{textDecoration:todo.isDone? "line-Through":"none"}} onClick={()=>dispatch(toggleTask(todo.id))}> {todo.description} </span><button onClick={()=>dispatch(deleteTodo(todo.id))}>Del</button></div>  
+        <div><span style={{textDecoration:todo.isDone? "line-Through":"none"}} onClick={()=>dispatch(toggleTask(todo.id))}> {todo.description} </span><button style={{"border-radius":10}} onClick={()=>dispatch(deleteTodo(todo.id))}>Del</button></div>  
       <br/>
-       <div><input placeholder="upToDo" value={updatedTodo.description} onChange={(e)=>setupdatedTodo({...updatedTodo,description:e.target.value})}></input></div>
+       <div><input placeholder="upToDo..." value={updatedTodo.description} onChange={(e)=>setupdatedTodo({...updatedTodo,description:e.target.value})}></input></div>
        
-        <button onClick={()=>dispatch(editTodo(updatedTodo))}>Update</button>
+        <button  style={{"border-radius":10}} onClick={()=>dispatch(editTodo(updatedTodo))}>Update</button>
         </div>
     )
 }

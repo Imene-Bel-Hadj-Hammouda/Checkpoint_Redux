@@ -30,13 +30,13 @@ function App() {
       <div className="border">
     <div>
       <div className="buttonDone">
-        <button onClick={()=>dispatch(toggleFilter(null))}>ALL</button>
+        <button  style={{"border-radius":10}} onClick={()=>dispatch(toggleFilter(null))}>ALL</button>
         
-        <button onClick={()=>dispatch(toggleFilter(true))}>DONE</button>
-        <button onClick={()=>dispatch(toggleFilter(false))}>UNDONE</button>
+        <button style={{"border-radius":10}} onClick={()=>dispatch(toggleFilter(true))}>DONE</button>
+        <button style={{"border-radius":10}} onClick={()=>dispatch(toggleFilter(false))}>UNDONE</button>
       </div>
       <br/>
-<input type="text" placeholder="AddTodo..." value={newTodo.description} onChange={(e)=>setNewTodo({...newTodo,description:e.target.value})}></input> <button onClick={handleSave}>Add</button>
+<input type="text" placeholder="AddTodo..." value={newTodo.description} onChange={(e)=>setNewTodo({...newTodo,description:e.target.value})}></input> <button style={{"border-radius":10}} onClick={handleSave}>Add</button>
     </div> 
 <br/>
    <div> 
